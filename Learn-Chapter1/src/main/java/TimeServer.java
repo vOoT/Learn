@@ -8,6 +8,10 @@ import java.net.Socket;
 public class TimeServer {
     static int port = 80;
 
+    /**
+     * 这是一个同步IO阻塞的例子
+     * @param
+     */
     public static void main(String[] args) {
         ServerSocket server = null;
         try {
