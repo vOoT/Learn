@@ -1,5 +1,6 @@
 import java.io.*;
 import java.net.Socket;
+import java.util.Date;
 
 /**
  * Created by qee on 2016/3/30.
@@ -18,11 +19,13 @@ public class TimeServerHandler implements Runnable {
             printWriter= new PrintWriter(new OutputStreamWriter(socket.getOutputStream()),true);
             String body=null;
             while (true){
-                bufferedReader.readLine();
+                System.out.println("print client send info");
+                body =bufferedReader.readLine();
                 if (body==null){
                     break;
                 }
                 System.out.println(body);
+                printWriter.println(new Date(System.currentTimeMillis()));
             }
         } catch (IOException e) {
             e.printStackTrace();

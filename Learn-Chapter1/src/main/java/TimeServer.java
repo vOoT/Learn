@@ -4,6 +4,7 @@ import java.net.Socket;
 
 /**
  * Created by qee on 2016/3/30.
+ * 该例子属于IO阻塞模式，每个客户端的请求都通过一个线程去处理。
  */
 public class TimeServer {
     static int port = 80;
